@@ -1,0 +1,50 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-rendering: optimizeLegibility;
+}
+
+.div-content {
+    align-content: center;
+}
+
+.elemento {
+    background: rgba(248, 105, 61, 0.938);
+}
+
+nav ul {
+    display: flex;
+    align-content: space-between;
+    align-content: center;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5em;
+    margin-left: 50px;
+    color: aliceblue;
+    text-align: center;
+    text-decoration: none;
+}
+
+h1 {
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}
+
+.container-img {
+    display: flex;
+    align-content: space-between;
+}
+
+.container-img p {
+    margin-left: 5px;
+    display: inline-block;
+    align-items: center;
+}
