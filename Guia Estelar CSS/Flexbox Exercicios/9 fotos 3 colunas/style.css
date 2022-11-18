@@ -1,0 +1,26 @@
+/*
+9 fotos em 3 colunas
+
+Crie uma galeria de fotos onde teremos 3 colunas e 9 fotos.
+deixe um espaço de .8rem entre os elementos da galeria
+*/
+
+body {
+     padding: 20vh;
+}
+
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: .8rem;
+}
+
+
+.img-container img {
+    width: 220px;
+    height: 220px;  
+    box-shadow: 1px 1px 0.8rem 0 rgb(133, 133, 133);
+}

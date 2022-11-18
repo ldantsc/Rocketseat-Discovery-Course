@@ -1,0 +1,32 @@
+/*
+Layout com duas colunas
+
+Crie um layout com 2 colunas, uma ao lado da outra.
+A coluna da esquerda deverá ter 25% de tamanho e a coluna da direita deverá ocupar todo o espaço que sobra.
+Faça uma separação de 1rem entre os elementos 
+*/
+
+body {
+    margin: 0;
+    padding: 40px;
+}
+
+.container {
+    display: flex;
+    height: 85vh;
+    gap: 1em;
+}
+
+
+div aside {
+    flex-basis: 25%;
+    background-color: rgba(176, 196, 230, 0.3);
+    box-shadow: 1px 1px 0.3rem 0 rgb(185, 185, 185);
+}
+
+div main {
+    /*flex: 1;*/
+    flex-grow: 1;
+    background-color: rgba(224, 176, 230, 0.3);
+    box-shadow: 1px 1px 0.4rem 0 rgb(185, 185, 185);
+}

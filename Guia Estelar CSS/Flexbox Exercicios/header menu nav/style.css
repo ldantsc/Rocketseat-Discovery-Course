@@ -1,0 +1,86 @@
+/*
+ Header Menu Navigation
+
+ Crie o <header> de um site que contenha uma logo e um menu.
+ Um elemento deverá ficar ao lado do outro.
+ A logo que ficará na extrema esquerda e o menu ficará na extrema direita.
+ Os itens do menu ficarão um ao lado do outro, com um espaço de .8rem entre eles
+ O último elemento do menu será um botão de contato e você poderá utilizar o seletor :last-child para estilizar
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap');
+
+body {
+    text-rendering: optimizeLegibility;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    height: 16px;
+    padding: 28px;
+    justify-content: space-between;
+    /*border-bottom: 0.1em solid rgb(179, 179, 179, 0.3);*/
+    box-shadow: 0 -4px 0.8rem rgba(172, 172, 172, 0.733) ;
+}
+
+div {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 22px;
+}
+
+.logo-menu {
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+}
+
+
+.logo-menu a {
+    font-size: 24px;
+    color: black;
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: flex-end;
+    gap: .8rem;
+    align-items: center;
+}
+
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    gap: .8rem;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+/* dar margem entre o ultimo li e o botão */
+.nav-menu ul li:last-child {
+    display: flex;
+    margin-right: 12px;
+}
+
+.btn-menu {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    width: 80px;
+    height: 35px;
+    color: white;
+    background-color: blue;
+    border-style: none;
+    border-radius: 0.3em;
+}
+
+.nav-menu ul li a:hover {
+    color: blue;
+    border-bottom: 1px solid rgba(0, 0, 255, 0.8);
+    transition: 350ms;  
+}
