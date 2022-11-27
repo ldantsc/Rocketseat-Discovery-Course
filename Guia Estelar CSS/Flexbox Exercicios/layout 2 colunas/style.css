@@ -20,6 +20,7 @@ body {
 
 div aside {
     flex-basis: 25%;
+    justify-content: s;
     background-color: rgba(176, 196, 230, 0.3);
     box-shadow: 1px 1px 0.3rem 0 rgb(185, 185, 185);
 }

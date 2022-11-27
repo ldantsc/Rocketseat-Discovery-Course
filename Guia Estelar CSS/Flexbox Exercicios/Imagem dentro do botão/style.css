@@ -1,0 +1,40 @@
+/*
+Imagem dentro de um botão
+
+Crie um botão que contenha um ícone(img) e um texto.
+Coloque um espaço de .4rem entre os elementos.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Titillium+Web:wght@300&display=swap');
+
+body {
+    text-rendering: optimizeLegibility;
+    padding: 24px;
+}
+
+div img {
+    display: flex;
+    gap: 8rem;
+    width: 14px;
+    margin-right: .4rem;
+    line-height: 0;
+}
+
+div .btn {
+    background-color: blue;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: bold;
+    border-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 40px;
+    border-radius: 0.3rem;
+    color: azure;
+    text-decoration: none;
+}
+
+div .btn:hover {
+    background-color: rgb(3, 3, 245);
+}
