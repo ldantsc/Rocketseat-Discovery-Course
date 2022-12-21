@@ -1,0 +1,22 @@
+{
+  "name": "desafio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "process.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "learning",
+    "nodejs"
+  ],
+  "author": "Author Name",
+  "license": "ISC",
+  "devDependencies": {
+    "cfonts": "^3.1.1"
+  },
+  "dependencies": {
+    "inquirer": "^9.1.4",
+    "opn": "^6.0.0"
+  }
+}
