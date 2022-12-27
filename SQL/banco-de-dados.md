@@ -43,4 +43,4 @@ UPDATE clientes SET endereco = 'Rua das Flores, 1' WHERE id = 1;
 DELETE FROM clientes WHERE id = 1;
 ```
 
-*Chat Gpt*
+*Informações cedidas do ChatGPT*
