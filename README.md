@@ -1,7 +1,5 @@
 # Discovery - Rocketseat
 
-Rocketseat Discovery Course - Introduction to Web Development course notes and activities
-
  Este é um repositório com anotações de estudos do curso Discovery da Rocketseat tendo as seguintes trilhas:
  
   * Trilha Conectar [✅ Certificação: https://drive.google.com/file/d/1OR4MG7B9ue3Me2lnaVRQCoaEXlbBKmkE/view]
