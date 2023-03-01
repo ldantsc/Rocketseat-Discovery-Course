@@ -5,7 +5,8 @@
   * Trilha Conectar
     - ✅ Certificação: https://drive.google.com/file/d/1OR4MG7B9ue3Me2lnaVRQCoaEXlbBKmkE/view
 
-  * Trilha Fundamentar [📚... 90%]
+  * Trilha Fundamentar
+    - ✅ Certificação: https://drive.google.com/file/d/1lhE-65XUV8Wz6Ud4Fb0jKRdp_7yCPZg4/view?usp=sharing
 
   * Trilha Especializar [📚... 0%]
   
