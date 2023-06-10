@@ -8,6 +8,6 @@
   * Trilha Fundamentar
     - ✅ Certificação: https://drive.google.com/file/d/1lhE-65XUV8Wz6Ud4Fb0jKRdp_7yCPZg4/view?usp=sharing
 
-  * Trilha Especializar [📚... 0%]
+  * Trilha Especializar [📚... 33%]
   
  Com foco em desenvolvimento Web e abordando diversos assuntos e ferramentas como HTML, CSS, JavaScript, Node.js e outros! 🚀
