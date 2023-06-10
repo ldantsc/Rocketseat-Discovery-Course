@@ -10,6 +10,7 @@ O conteúdo da variável não deve ser modificado e sim substituído.*/
 export function Home() {
   const [studentName, setStudentName] = useState('');
   const [students, setStudents] = useState([]);
+  const [user, setUser] = useState({ name: '', avatar: '' })
 
   function handleAddStudent() {
     const newStudent = {
@@ -41,11 +42,37 @@ export function Home() {
 
   useEffect(() => {
     //corpo do useEffect
+    //aqui verificamos como lidar com requisições assíncronas utilizando o Hook useEffect, n é posivel usar async userEffect()
+    async function userData() {
+      const response = await fetch('https://api.github.com/users/ldantsc');
+      const data = await response.json();
+      setUser({
+        name: data.name,
+        avatar: data.avatar_url,
+      })
+
+    }
+
+
+/*fetch fazendo req http do github
+    fetch('https://api.github.com/users/ldantsc')
+    //then para converter a resposta para json
+    .then(response => response.json())
+    .then(data => {
+      setUser({
+        name: data.name,
+        avatar: data.avatar_url,
+      })
+    })
+*/
+
+
     //useEffect é usado assim que a pagina for renderizada
     // Dentro do objeto devemos colocar todas. ações que serão executadas.
-     console.log('useEffect test')
     // Os arrays definem quais os estados que o useEffect depende.
-  }, [students])
+
+    userData();
+  }, [])
 
   return (
     <div className='container'>
@@ -54,8 +81,8 @@ export function Home() {
       <header>
         <h1>Nome: {studentName}</h1>
         <div>
-          <strong>Lucas</strong>
-          <img src="https://github.com/ldantsc.png" alt="foto de perfil" />
+          <strong>{user.name}</strong>
+          <img src={user.avatar} alt="foto de perfil" />
         </div>
       </header>
       <input type="text"
