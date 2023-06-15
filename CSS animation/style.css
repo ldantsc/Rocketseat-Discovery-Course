@@ -1,0 +1,45 @@
+.ball {
+    width: 100px;
+    height: 100px;
+    background-color: brown;
+    border-radius: 100%;
+    position: relative;
+    animation-name: example; /*keyframe name*/
+    animation-duration: 5s; /*duração*/
+    animation-delay: 2s;    /*delay da animação*/
+    animation-direction: alternate-reverse; /*direção da animação*/
+    animation-iteration-count: infinite;    /*contagem de quantas vezes a animação será executada*/
+    animation-timing-function: ease-in; /*padrão de velocidade da animação, (padrão:ease)*/
+    
+    /*animation-fill-mode: both; ele para a execução da animação na ultima chave keyframe 
+    e atribui as propriedades para o item no caso a div .ball*/
+}
+
+@keyframes example {
+    0% {
+        background-color:darkslategrey;
+        left: 0;
+        top: 0;
+
+    }
+    25% {
+        background-color: chartreuse;
+        left: 200px;
+        top: 0;
+    }
+    50% {
+        background-color: coral;
+        left: 200px;
+        top: 200px;
+    }
+    75% {
+        background-color: dodgerblue;
+        left: 0;
+        top: 200px;
+    }
+    100% {
+        background-color: rgb(255, 13, 215);
+        left: 0;
+        top: 0;
+    }
+}
