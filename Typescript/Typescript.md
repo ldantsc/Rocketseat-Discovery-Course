@@ -128,6 +128,7 @@ printUserId("101");
 O generic no TypeScript nos permite reutilizar uma determinada implementação de código, de forma tipada. Para representar um generic, nós declaramos ele dessa forma <T> podendo ser utilizado qualquer outra letra, existem as convenções que podemos seguir:
 
 ```
+
 <S> → Representando State 
 <T> → Representando Type 
 <K> → Representando Key 
