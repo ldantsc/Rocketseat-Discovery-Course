@@ -105,3 +105,146 @@ function showMessages(message: string) {
 console.log(showMessages("Oi, João"))
 
 ``` 
+
+## Union
+
+O Operador Union, representado pelo pipe | nos permite adicionar mais de um tipo na variável. Vamos ao exemplo:
+
+```ts
+
+function printUserId(id: number | string) {  //podemos interpretar que o pipe significa 'ou'(AND)
+    console.log(`O ID do usuário é: ${id}`);
+}
+
+printUserId(101);
+printUserId("101");
+
+// Dessa forma, podemos passar tanto number quanto string
+
+```
+
+## Generics
+
+O generic no TypeScript nos permite reutilizar uma determinada implementação de código, de forma tipada. Para representar um generic, nós declaramos ele dessa forma <T> podendo ser utilizado qualquer outra letra, existem as convenções que podemos seguir:
+
+<S> → Representando State 
+<T> → Representando Type 
+<K> → Representando Key 
+<V> → Representando Value 
+<E> → Representando Element
+
+Exemplo de um trecho de código utilizando generics:
+
+```ts
+
+function useState<T>() {
+    let state: T;
+
+    function get(){
+        return state;
+    }
+
+    function set(newValue: T){
+        state = newValue;
+    }
+
+    return { get, set}
+}
+
+let newState = useState();
+newState.get();
+newState.set("João");
+newState.set(123);
+
+```
+
+## Type
+
+Para não ficar sempre repetindo os tipos para todas as variáveis podemos criar Types para cada uma delas.
+
+Veja o exemplo a seguir:
+
+```ts
+
+type IdType = string | number | undefined;
+
+let userId: IdType;
+let adminId: IdType;
+
+userId = 1;
+userId = '1';
+userId = undefined;
+
+adminId = 1;
+adminId = '2';
+adminId = undefined;
+
+```
+
+## Type Assertions
+
+Asserção de tipo normalmente é utilizado quando o TypeScript não sabe qual é a tipagem em um determinado objeto.
+
+Para contornarmos isso, podemos criar um type informando quais são as propriedades desse objeto.
+
+ ```ts
+type UserResponse = {
+    id: number;
+    name: string;
+    avatar: string;
+}
+
+let userResponse = {} as UserResponse;
+
+```
+
+## Objetos 
+
+```ts
+
+type Point = {  
+    x: number;  //declarar o tipo de dado para as propriedades;
+    y: number;
+}
+
+function printCoord(points: Point) { //preferencia criar tipos começando com letra maiuscula
+    console.log(`O eixo x é: ${points.x}`)
+    console.log(`O eixo y é: ${points.y}`)
+}
+
+printCoord({x: 101, y: 50})
+
+```
+
+Resultado do log:
+
+```
+
+Resultado do log:
+
+[LOG]: "O eixo x é: 101"
+------------------------
+[LOG]: "O eixo y é: 50"
+
+```
+
+## Opcional
+
+Para informamos que uma propriedade é opcional inserimos o sinal de ?
+
+```ts 
+
+type User = {
+    name: string;
+    email: string;
+    age: number;
+    isAdmin?: boolean; // isAdmin não será obrigatória na sua declaração
+}
+
+let newUser: User = {
+    name: 'João',
+    email: 'joao@email.com',
+    age: 18
+}
+
+```
