@@ -252,3 +252,124 @@ let newUser: User = {
 }
 
 ```
+
+## Intersecção de tipos
+
+A intersecção de tipos como o próprio nome já diz, podemos unir dois tipos e usar as suas propriedades dentro de um objeto.
+
+Segue o exemplo abaixo:
+
+```ts
+
+type User = {
+    id: number,
+    name: string,
+}
+
+type Char = {
+    nickname: string,
+    level: number
+}
+
+type PlayerInfo = User & Char; // unindo os dois tipos dentro do objeto PlayerInfo
+
+let info: PlayerInfo = {
+    id: 1,
+    name: 'João Inácio',
+    nickname: 'birobirobiro',
+    level: 50
+}
+
+```
+## Interface
+
+Outra maneira de criar tipagens no TypeScript é utilizando a interface .
+
+Segue o exemplo:
+
+```ts
+
+interface User {
+    id: number
+    name: string,
+}
+
+let newUser: User = {
+    id: 1,
+    name: "João"
+}
+
+function registerNewUser(newUser: User){
+    newUser.id
+    newUser.name
+}
+
+```
+
+## Type e Interface
+
+O objetivo de ambos serve para definir tipagens no TypeScript. O type é mais recomendado por ser mais simples, fácil de lidar com tipos primitivos, por ser mais flexível. Já as interfaces são utilizadas normalmente em criação de libs, para aqueles que gostam da programação orientada a objetos.
+
+O exemplo abaixo mostra a diferença na sintaxe e união entre type e inteface:
+
+```ts
+
+type TUser = {
+    id: number;
+    name: string;
+}
+
+type TPayment = {
+    method: string;
+}
+
+// Fazendo união com Type
+type TAccount = TUser & TPayment
+
+interface IUser {
+    id: number;
+    name: string;
+}
+
+interface IPayment {
+    method: string;
+}
+
+// Fazendo união com interfaces
+interface IAccount extends IUser, IPayment {}
+
+```
+
+
+## tsconfig
+
+É um arquivo de configuração do TypeScript, ele pode ser escrito tanto em formato de JavaScript quanto no formato JSON.
+
+Exemplo de um arquivo tsconfig.json :
+
+```json
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": true
+  },
+  "files": [
+    "core.ts",
+    "sys.ts",
+    "types.ts",
+    "scanner.ts",
+    "parser.ts",
+    "utilities.ts",
+    "binder.ts",
+    "checker.ts",
+    "emitter.ts",
+    "program.ts",
+    "commandLineParser.ts",
+    "tsc.ts",
+    "diagnosticInformationMap.generated.ts"
+  ]
+}
+```
